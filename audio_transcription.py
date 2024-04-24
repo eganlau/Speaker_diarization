@@ -1,3 +1,6 @@
+import sys
+sys.path.append(".")
+sys.path.append("..")
 from speaker_diarization import SpeakerDiarizer
 from find_names import assign_speaker_name, transcript_to_dictionary
 
@@ -5,7 +8,8 @@ print("Initializing SpeakerDiarizer...")
 diarizer = SpeakerDiarizer(num_speakers=2)
 
 print("Running diarization...")
-transcript = diarizer.diarize('audio_files/Meeting1.mp3')
+# transcript = diarizer.diarize('Speaker_diarization/audio_files/Meeting1.mp3')
+transcript = diarizer.diarize('Speaker_diarization/audio_files/stealth.mp3')
 
 print("Finished diarization. Transcript:")
 print(transcript)
