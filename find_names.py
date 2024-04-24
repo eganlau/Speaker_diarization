@@ -9,6 +9,8 @@ def assign_speaker_name(dialogue):
 
     # Initialize speaker names dictionary
     speaker_dict = {}
+    
+    output_lines = ""
 
     for i in range(0, len(lines), 2):
         speaker_line = lines[i]
@@ -29,9 +31,10 @@ def assign_speaker_name(dialogue):
         speaker_name = speaker_dict.get(speaker_number, f"SPEAKER {speaker_number}")
 
         # Print the dialogue line with the speaker's name
-        print(f"{speaker_name} {speaker_number} {speaker_line.split()[2]}")
-        print(dialogue_line)
+        output_lines += f"{speaker_name} {speaker_number} {speaker_line.split()[2]}" +"\n"
+        output_lines += dialogue_line + "\n"
 
+    return output_lines
 
 def transcript_to_dictionary(dialogue):
     # Split the output into lines

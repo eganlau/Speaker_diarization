@@ -5,7 +5,7 @@ print("Initializing SpeakerDiarizer...")
 diarizer = SpeakerDiarizer(num_speakers=2)
 
 print("Running diarization...")
-transcript = diarizer.diarize('audio_files\Meeting1.mp3')
+transcript = diarizer.diarize('audio_files/Meeting1.mp3')
 
 print("Finished diarization. Transcript:")
 print(transcript)
